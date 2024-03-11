@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "jax-playground"
+version = "0.1.0"
+description = ""
+authors = ["Sangwon91 <lsw91.main@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tensorflow-datasets = "^4.9.4"
+notebook = "^7.1.1"
+matplotlib = "^3.8.3"
+pandas = "^2.2.1"
+jax = {extras = ["cuda11-pip"], version = "^0.4.25"}
+flax = "^0.8.1"
+optax = "^0.2.1"
+
+[[tool.poetry.source]]
+name = "jaxlib"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
